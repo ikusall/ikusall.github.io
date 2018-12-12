@@ -2,12 +2,33 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>start github</title>
+<title>memo</title>
+<script src="jquery-3.3.1.min.js"></script>
 </head>
-
 <body>
-   
-    <P>github</P>   
+    <from action="" id="from">
+       <textarea id="memo" cols="30" rows="10"></textarea>
+       <div>
+           <input id="save" type="button" value="保存">
+           <input id="dele" type="button" value="消去">
+       </div>
+    </from>
+    
+    <script>
+        
+    var memo = localStorage.getItem("memodata"); //データを取得するとき
+    $("#memo").val(memo);
+    
+    $("#save").click(function(){
+        memo = $("#memo").val();
+        localStorage.setItem("memodata",memo);//データを保存
+    });
+        
+        $("#dele").click(function(){
+        $("#memo").val('');
+        localStorage.clear();//データを消去するとき
+        });
+    </script>
     
 </body>
 
