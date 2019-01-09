@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>memo</title>
-
-<link rel="icon" href="favicons/icon-16x16.png" type="image/png" sizes="16×16">
-<link rel="icon" href="favicons/apple-touch-icon-180x180.png" sizes="180×180">
-<link rel="manifest" href="favicons/manifest.json">
-
-<script src="jquery-3.3.1.min.js"></script>
-    <style>
-        body{
-            background-color:#a2f8ff;
-        }
-    
-        @media screen and (max-width:480px){
-            body{
-                background-color: #ff5757;
-        }
-            textarea{
-                width:90%;
-            }
-            input{
-                width:100%;
-                font-size:50px;
-                border:1px solid #900;
-                margin-top:20px;
-                background-color:white;
-            }
-    }
-    </style>
+    <meta charset="UTF-8">
+    <title>問題１</title>
 </head>
 <body>
-    <from action="" id="from">
-       <textarea id="memo" cols="30" rows="10"></textarea>
-       <div>
-           <input id="save" type="button" value="保存">
-           <input id="dele" type="button" value="消去">
-       </div>
-    </from>
-    
+<p class="r">挑戦状</p>
+<div class="r"><a href="page1.html" class="btn">START</a></div>
     <script>
         
-    var memo = localStorage.getItem("memodata"); //データを取得するとき
-    $("#memo").val(memo);
-    
-    $("#save").click(function(){
-        memo = $("#memo").val();
-        localStorage.setItem("memodata",memo);//データを保存
-    });
-        
-        $("#dele").click(function(){
-        $("#memo").val('');
-        localStorage.clear();//データを消去するとき
-        });
     </script>
-    
-</body>
+    <style>
+        
+body{
+background: linear-gradient(45deg, #6cb8ff, #fff66c, #ffa36c)no-repeat;
+background-size: 1000% 2000%;
+animation: AnimationName 10s ease infinite;
+}
+ 
+@keyframes AnimationName {
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+        
+    .btn{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 50px;
+  background: #87befd;
+  color: #FFF;
+  width: 500px;
+  height: 500px;
+  line-height: 500px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: .4s;
+}
 
+.btn:hover{
+    background: #668ad8;
+}
+
+
+.r{
+            display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+        
+    
+        
+    </style>
+</body>
 </html>

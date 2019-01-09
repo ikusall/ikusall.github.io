@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>問題２</title>
+</head>
+<body>
+<div id="page1">
+    <h1>問題２：来年は東京オリンピックがある？</h1>
+
+    <div><a href="#" onclick="machigai()">はい</a></div>
+    <div><a href="#" onclick="seikai()">いいえ</a></div>
+    
+</div>
+
+    <script>
+        var hit = Number(localStorage.hit);
+
+        function seikai(){
+            hit = hit+1;
+            localStorage.hit = hit;
+            location.href = "kekka.html";
+        }
+        function machigai(){
+            localStorage.hit = hit;
+            location.href = "kekka.html";
+        }
+        
+    </script>
+</body>
+</html>

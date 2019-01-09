@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>問題１</title>
+</head>
+<body>
+<div id="page1">
+    <h1>問題１：来年は2019年？</h1>
+    <div><a href="#" onclick="seikai()">はい</a></div>
+    <div><a href="#" onclick="machigai()">いいえ</a></div>
+</div>
+
+  
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="jquery.fademover.js"></script>
+<script>
+$(function(){
+	$('body').fadeMover();
+});
+</script>
+   
+   
+    <script>
+        var hit=0;
+
+        function seikai(){
+            hit = hit+1;
+            localStorage.hit = hit;
+            location.href = "page2.html";
+        }
+        function machigai(){
+            localStorage.hit = hit;
+            location.href = "page2.html";
+        }
+        
+    </script>
+</body>
+</html>
