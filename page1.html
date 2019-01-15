@@ -7,8 +7,9 @@
 <body>
 <div id="page1">
     <h1>問題１：来年は2019年？</h1>
-    <div><a href="#" onclick="seikai()">はい</a></div>
-    <div><a href="#" onclick="machigai()">いいえ</a></div>
+    <div><a class="square_btn" href="#" onclick="seikai()">A1.</a></div>
+    <br>
+    <div><a class="square_btn" href="#" onclick="machigai()">いいえ</a></div>
 </div>
 
   
@@ -47,6 +48,32 @@ animation: AnimationName 10s ease infinite;
 50%{background-position:100% 50%}
 100%{background-position:0% 50%}
 }
+        
+        
+.square_btn{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #00BCD4;
+    background: #ECECEC;
+    transition: .4s;
+    
+    
+    
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    font-size: 50px;
+  }
+.square_btn:hover {
+    background: #00bcd4;
+    color: white;
+}        
+        
+        
+
     </style>
 </body>
 </html>
