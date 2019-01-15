@@ -5,8 +5,8 @@
     <title>問題１</title>
 </head>
 <body>
-<p class="r">挑戦状</p>
-<div class="r"><a href="page1.html" class="btn">START</a></div>
+<p class="r">間違い探し</p>
+<div class="b"><a href="page1.html" class="btn">START</a></div>
     <script>
         
     </script>
@@ -24,7 +24,7 @@ animation: AnimationName 10s ease infinite;
 100%{background-position:0% 50%}
 }
         
-    .btn{
+.btn{
   display: inline-block;
   text-decoration: none;
   font-size: 50px;
@@ -46,11 +46,42 @@ animation: AnimationName 10s ease infinite;
 
 
 .r{
-            display: flex;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 50px;
+ 
+ position: relative;
+ color: black;
+ background: #d0ecff;
+ line-height: 1.4;
+ padding: 0.25em 0.5em;
+ margin: 2em 0 0.5em;
+ border-radius: 0 5px 5px 5px;
 }
 
+r:after {/*タブ*/
+  position: absolute;
+  font-family: "Font Awesome 5 Free",'Quicksand','Avenir','Arial',sans-serif;
+  content: '\f00c Check';
+  background: #2196F3;
+  color: #fff;
+  left: 0px;
+  bottom: 100%;
+  border-radius: 5px 5px 0 0;
+  padding: 3px 7px 1px;
+  font-size: 0.7em;
+  line-height: 1;
+  letter-spacing: 0.05em
+  }
+    
+
+.b{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    font-size: 50px;
+}
 
         
     
