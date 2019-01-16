@@ -2,12 +2,27 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>結果</title>
+    <title>結果＆答え合わせ</title>
 </head>
 <body>
 <div id="kekka">
+   <div class="h">
     <h1>正解数は</h1>
+    </div>
     <div id="result"></div>
+</div>
+
+<div>
+   <div class="h">
+    <h1>答え合わせ</h1>
+    </div>
+     <div class="center">
+      <img src="matigai-sagashi5-3.jpg" alt="画像" />
+    </div>
+    <br>
+    <div class="center">
+      <img src="matigai-sagashi6-3.jpg" alt="画像" />
+    </div>
 </div>
 
 <script>
@@ -16,7 +31,7 @@ var hit = localStorage.hit;
 
 result.innerHTML = "正解数は2問中　"+hit+"問です。";
 </script>
-    
+
 <style>
     body{
 background: linear-gradient(45deg, #6cb8ff, #fff66c, #ffa36c)no-repeat;
@@ -29,6 +44,10 @@ animation: AnimationName 10s ease infinite;
 50%{background-position:100% 50%}
 100%{background-position:0% 50%}
 }
+    .h{
+        font-size: 20px;
+    }
+    
 </style>
 </body>
 </html>

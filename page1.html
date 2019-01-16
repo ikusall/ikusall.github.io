@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>問題１</title>
+    <title>もんだい１</title>
 </head>
 <body>
 <div id="page1">
@@ -21,33 +21,31 @@
 </div>
 
   
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="jquery.fademover.js"></script>
 <script>
-$(function(){
-	$('body').fadeMover();
-});
+        $(function(){
+	   $('body').fadeMover();
+        });
 </script>
    
    
-    <script>
-        var hit=0;
+<script>
+    var hit=0;
 
-        function seikai(){
-            hit = hit+1;
-            localStorage.hit = hit;
-            location.href = "page2.html";
-        }
-        function machigai(){
-            localStorage.hit = hit;
-            location.href = "page2.html";
-        }
+    function seikai(){
+        hit = hit+1;
+        localStorage.hit = hit;
+        location.href = "page2.html";
+    }
+    function machigai(){
+        localStorage.hit = hit;
+        location.href = "page2.html";
+    }
+</script>
+<style>
         
-    </script>
-    <style>
-        
-        .center{
-background-color: #ECECEC;
+.center{
   text-align: center;
 }
         

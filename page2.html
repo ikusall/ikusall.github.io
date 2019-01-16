@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>問題２</title>
+    <title>もんだい２</title>
 </head>
 <body>
 <div id="page1">
@@ -20,20 +20,29 @@
     <br>
 </div>
 
-    <script>
-        var hit = Number(localStorage.hit);
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="jquery.fademover.js"></script>
+<script>
+$(function(){
+	$('body').fadeMover();
+});
+</script>
+   
+   
+<script>
+    var hit = Number(localStorage.hit);
 
-        function seikai(){
-            hit = hit+1;
-            localStorage.hit = hit;
-            location.href = "kekka.html";
-        }
-        function machigai(){
-            localStorage.hit = hit;
-            location.href = "kekka.html";
-        }
+    function seikai(){
+        hit = hit+1;
+        localStorage.hit = hit;
+        location.href = "kekka.html";
+    }
+    function machigai(){
+        localStorage.hit = hit;
+        location.href = "kekka.html";
+    }
         
-    </script>
+</script>
     <style>
     body{
 background: linear-gradient(45deg, #6cb8ff, #fff66c, #ffa36c)no-repeat;
